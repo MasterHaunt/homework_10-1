@@ -7,12 +7,12 @@ example_transactions = [
     {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T08:21:33.419441"},
 ]
 
-executed_list = processing.filter_by_state(example_transactions)
+sorted_downwards_transactions = processing.sort_by_date(example_transactions)
 
-print("EXECUTED:")
-print(executed_list)
+print("order = True -> from first to last:")
+print(sorted_downwards_transactions)
 
-canceled_list = processing.filter_by_state(example_transactions, "CANCELED")
+sorted_upwards_transactions = processing.sort_by_date(example_transactions, order=False)
 
-print("CANCELED:")
-print(canceled_list)
+print("\norder = False -> from last to first:")
+print(sorted_upwards_transactions)
