@@ -12,7 +12,7 @@ sorted_downwards_transactions = processing.sort_by_date(example_transactions)
 print("order = True -> from first to last:")
 print(sorted_downwards_transactions)
 
-sorted_upwards_transactions = processing.sort_by_date(example_transactions, order=False)
+sorted_upwards_transactions = processing.sort_by_date(example_transactions, descending=False)
 
 print("\norder = False -> from last to first:")
 print(sorted_upwards_transactions)

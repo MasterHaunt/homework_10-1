@@ -10,9 +10,9 @@ def filter_by_state(transactions: list, state: str = "EXECUTED") -> list:
     return filtered_transactions
 
 
-def sort_by_date(transactions: list, order: bool = True) -> list:
+def sort_by_date(transactions: list, descending: bool = True) -> list:
     """Функция принимает на вход список словарей с информацией о транзакциях и возвращает его отсортированным:
     - если второй параметр не передан или передан в значении "True" -> по убыванию (от ранних к поздним);
     - если второй параметр передан в значении "False" -> по возрастанию (от последних к ранним)"""
 
-    return sorted(transactions, key=lambda transaction: transaction["date"], reverse=order)
+    return sorted(transactions, key=lambda transaction: transaction["date"], reverse=descending)
