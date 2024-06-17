@@ -15,6 +15,6 @@ def mask_account_card(account_card: str) -> str:
         return card_id
 
 
-def transaction_date(transaction_id: str) -> str:
+def transaction_date(transaction_datetime: str) -> str:
     """функция определения даты транзакции"""
-    return transaction_id[8:10] + "." + transaction_id[5:7] + "." + transaction_id[0:4]
+    return transaction_datetime[8:10] + "." + transaction_datetime[5:7] + "." + transaction_datetime[0:4]
