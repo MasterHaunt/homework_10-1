@@ -9,10 +9,10 @@ example_transactions = [
 
 sorted_downwards_transactions = processing.sort_by_date(example_transactions)
 
-print("order = True -> from first to last:")
+print("descending = True -> from first to last:")
 print(sorted_downwards_transactions)
 
 sorted_upwards_transactions = processing.sort_by_date(example_transactions, descending=False)
 
-print("\norder = False -> from last to first:")
+print("\ndescending = False -> from last to first:")
 print(sorted_upwards_transactions)
