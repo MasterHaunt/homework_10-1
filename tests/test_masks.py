@@ -7,6 +7,7 @@ from src import masks
                           ('420O568974529687', 'Некорректный номер карты!'),
                           ('420056897452687', 'Некорректный номер карты!')])
 def test_get_mask_card_number(card_number, masked_card_number):
+    """Тестирование работы функции маскировки номера банковской карты """
     assert masks.get_mask_card_number(card_number) == masked_card_number
 
 
@@ -14,4 +15,5 @@ def test_get_mask_card_number(card_number, masked_card_number):
                          [('73654108430135874305', '**4305'), ('130208758470O0165874', 'Некорректный номер счёта!'),
                           ('1302087584700165874', 'Некорректный номер счёта!')])
 def test_get_mask_account(account_number, masked_account_number):
+    """Тестирование работы функции маскировки номера банковского счёта """
     assert masks.get_mask_account(account_number) == masked_account_number
