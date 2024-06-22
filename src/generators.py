@@ -11,5 +11,7 @@ def card_number_generator(start_index: int, stop_index: int):
         yield new_card_number
 
 
-# for card_number in card_number_generator(1000000, 1000099):
-#     print(card_number)
+def filter_by_currency(transactions: list[dict], currency: str):
+    for transaction in transactions:
+        if transaction['operationAmount']['currency']['code'] == currency:
+            yield transaction
