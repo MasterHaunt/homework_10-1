@@ -8,7 +8,9 @@
 * Создан модуль generators.py.
 * В модуле generators.py написана функция-генератор card_number_generator, которая создаёт номера карт в формате XXXX XXXX XXXX XXXX в указанном диапазоне.
 * В модуле generators.py написана функция filter_by_currency, выбирающая из списка словарей с информацией о транзакциях те транзакции, которые выполнены в указанной валюте.
-* 
+* В модуле generators.py написана функция transaction_descriptions, выбирающая из списка словарей с информацией о транзакциях значения по ключу "description" ("описание")
+* В пакете "tests" в модуле conftests.py добавлена фикстура, возвращающая список словарей с информацией о транзакциях для последующего использования функциями из модулей generators.py и test_generators.py 
+* В пакете "tests" создан модуль test_generators.py, в котором реализовано тестирование функций card_number_generator, filter_by_currency и transaction_descriptions. 
 
 ### Функционал, реализованный ранее:
 
